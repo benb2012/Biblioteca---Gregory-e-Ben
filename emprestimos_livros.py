@@ -13,7 +13,7 @@ sql_create = """CREATE TABLE emprestimos_livros (emprestimo_id INTEGER reference
           
             )"""
 
-#cria a tabela editoras
+#cria a tabela 
 conn.execute(sql_create)
 
 ##montando o sql do insert
@@ -28,7 +28,7 @@ conn.commit()
 
 data_string = "11/09/2002"
 objeto_data = datetime.strptime(data_string, "%d/%m/%Y")
-conn.execute(sql_insert, (1, 1, objeto_data.isoformat()))
+conn.execute(sql_insert, (2, 2, objeto_data.isoformat()))
 conn.commit() 
 
 #inserindo os registros na tabela editoras
