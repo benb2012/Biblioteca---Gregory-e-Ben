@@ -6,7 +6,7 @@ from usuarios import cadastrar_usuario, listar_usuarios
 from emprestimos import cadastrar_emprestimos, listar_emprestimos
 from emprestimos_livros import cadastrar_emprestimos_livros, listar_emprestimos_livros
 from criar_tabelas import criar_tabelas
-import usuarios 
+from usuarios import cadastrar_usuario, listar_usuarios
 
 
 # criar um menu para o usuário escolher a opção desejada onde o usuário pode escolher entre cadastrar, listar ou sair do programa
@@ -59,5 +59,6 @@ while True:
         break
     else:
         print("Opção inválida. Por favor, escolha uma opção válida.")
+
 
 
