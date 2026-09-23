@@ -1,16 +1,31 @@
 import sqlite3
 
-#conectando o banco de dados. Caso não existe, o banco é criado.卐
-conn = sqlite3.connect("biblioteca.db")
 
-#Apaga a tabela usuarios卐
-conn.execute("DROP TABLE IF EXISTS autores")
+def cadastrar_autores():
+#conectando o banco de dados. Caso não existe, o banco é criado.
+    conn = sqlite3.connect("biblioteca.db")
 
-#cria a tab usuarios卐
-conn.execute("CREATE TABLE autores (id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT NOT NULL)")
 
-#Inserindo os registros na tbela usuarios卐
-conn.executemany("INSERT INTO autores(nome) VALUES(?)", [("Karl Marx",), ("Adol Hitler",), ("Josef Stalin",)])
+#Inserindo os registros na tbela autores
 
-#Confirmando a criação e os inserts da tabela usuarios卐
-conn.commit()
+    aut = input("Digite o nome do autor:")
+
+    conn.executemany("INSERT INTO autores(nome) VALUES(?)", [(aut)])
+
+#Confirmando a criação e os inserts da tabela autores
+    conn.commit()
+
+
+#lista os autores cadastrados no banco de dados
+def listar_autores():
+    conn = sqlite3.connect("biblioteca.db")
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM autores")
+
+    resultados = cursor.fetchall()
+
+    for linha in resultados:
+        print(f"id: {linha[0]} | nome: {linha[1]}")
+
+    conn.close()

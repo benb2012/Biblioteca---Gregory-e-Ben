@@ -17,3 +17,17 @@ def cadastrar_usuario():
 
 #Confirmando a criação e os inserts da tabela usuarios
     conn.commit()
+
+
+def listar_usuarios():
+    conn = sqlite3.connect("biblioteca.db")
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM usuarios")
+
+    resultados = cursor.fetchall()
+
+    for linha in resultados:
+        print(f"id: {linha[0]} | nome: {linha[1]}")
+
+    conn.close()
