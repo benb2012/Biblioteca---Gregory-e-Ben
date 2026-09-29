@@ -1,6 +1,5 @@
 import sqlite3
 
-
 def verificar_id_existente(tabela, id):
     conn = sqlite3.connect("biblioteca.db")
     cursor = conn.cursor()
@@ -13,4 +12,4 @@ def verificar_id_existente(tabela, id):
     conn.close()
 
     # Retorna True se o ID existir, caso contrário, retorna False
-    return resultado is not None
+    return resultado[0] > 0

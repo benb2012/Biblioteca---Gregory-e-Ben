@@ -21,12 +21,15 @@ def cadastrar_livros():
     #verifica se o autor_id existe na tabela autores
     if not verificar_id_existente("autores", autor_id):
         print(f"Erro: O autor_id {autor_id} não existe na tabela autores.")
+        conn.close()
         return
+
     if not verificar_id_existente("editoras", editora_id):
         print(f"Erro: O editora_id {editora_id} não existe na tabela editoras.")
+        conn.close()
         return
-    else:
-        print("IDs válidos. Prosseguindo com o cadastro do livro.")
+
+    print("IDs válidos. Prosseguindo com o cadastro do livro.")
 
 
     conn.execute(sql_insert, 

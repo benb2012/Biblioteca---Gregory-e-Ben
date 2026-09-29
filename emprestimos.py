@@ -21,7 +21,7 @@ def cadastrar_emprestimos():
     if not verificar_id_existente("usuarios", usuario_id):
         print(f"Erro: O id {usuario_id} não existe na tabela usuarios.")
         return
-    objeto_data = datetime.strptime(data_emprestimo, "%d/%m/%Y")
+    objeto_data = datetime.datetime.strptime(data_emprestimo, "%d/%m/%Y")
     conn.execute(sql_insert, (usuario_id, objeto_data.isoformat()))
 #confirmando a criação e os inserts da tabela 
     conn.commit()

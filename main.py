@@ -12,21 +12,21 @@ from usuarios import cadastrar_usuario, listar_usuarios
 # criar um menu para o usuário escolher a opção desejada onde o usuário pode escolher entre cadastrar, listar ou sair do programa
 
 while True:
-    print("Escolha uma opção:")
+    print("\nEscolha uma opção:\n")
     print("1 - Cadastrar editoras")
     print("2 - Listar editoras")
-    print("3 - Cadastrar autores")
+    print("3 - Cadastrar autores\n")
     print("4 - Listar autores")
-    print("5 - Cadastrar livros")
+    print("5 - Cadastrar livros\n")
     print("6 - Listar livros")
-    print("7 - Cadastrar usuários")
+    print("7 - Cadastrar usuários\n")
     print("8 - Listar usuários")
-    print("9 - Cadastrar empréstimos")
+    print("9 - Cadastrar empréstimos\n")
     print("10 - Listar empréstimos")
-    print("11 - Cadastrar empréstimos de livros")
+    print("11 - Cadastrar empréstimos de livros\n")
     print("12 - Listar empréstimos de livros")
-    print("13 - Criar tabelas do banco de dados (Apagará todos os registros existentes)")
-    print("0 - Sair")
+    print("13 - Criar tabelas do banco de dados (Apagará todos os registros existentes)\n")
+    print("0 - Sair\n")
 
     opcao = input("Digite o número da opção desejada: ")
     if opcao == "1":
@@ -55,8 +55,11 @@ while True:
         listar_emprestimos_livros()
     elif opcao == "13":
         criar_tabelas()
+
     elif opcao == "0":
         break
+    elif opcao == "100":
+        print("Sabemos que provavelmente tem alguns erros mas pedimos desculpas quanto a isso, e pedimos gentilmente que nos perdoe sobre. Att. Ben e Gregory ✋😯🤚")
     else:
         print("Opção inválida. Por favor, escolha uma opção válida.")
 

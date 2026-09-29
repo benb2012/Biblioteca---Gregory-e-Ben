@@ -10,7 +10,7 @@ def cadastrar_autores():
 
     aut = input("Digite o nome do autor:")
 
-    conn.executemany("INSERT INTO autores(nome) VALUES(?)", [(aut)])
+    conn.execute("INSERT INTO autores(nome) VALUES(?)", [(aut)])
 
 #Confirmando a criação e os inserts da tabela autores
     conn.commit()
