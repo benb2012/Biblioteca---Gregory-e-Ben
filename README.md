@@ -1,6 +1,6 @@
 # Biblioteca---Gregory-e-Ben
  
-**Alunos:** 卐 Ben Beck e Gregory Ribeiro 卐  
+**Alunos:**  Ben Beck e Gregory Ribeiro 
 
 
 Implementação do exemplo clássico da Biblioteca salvando os dados em um banco de dados *sqlite*.
@@ -14,4 +14,4 @@ As tabelas do projeto são:
 **emprestimos**(*id, usuario_id, data*)  
 **emprestimos_livros**(*emprestimo_id, livro_id, data_devolucao*)  
 
-Em dupla, implemente a aplicação com menu de opções de cadastro e listagem para cada tabela do modelo.
+Em dupla, implementaremos a aplicação com menu de opções de cadastro e listagem para cada tabela do modelo.
